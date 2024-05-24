@@ -122,6 +122,7 @@ function numberToString(number) {
   return capitalizeFirstLetter(str.trim());
 }
 
+// User input aas garaas utga avsan test
 var nameInput = document.getElementById("input");
 
 document
@@ -136,4 +137,5 @@ document
     console.log(numberToString(nameInput.value + "төгрөг"));
   });
 
+//Console test
 console.log(numberToString(987654321) + " төгрөг");
