@@ -1,4 +1,4 @@
-function numberToString(number) {
+function numberToWord(number) {
   const units = [
     "",
     "нэг",
@@ -131,11 +131,11 @@ document
     //
     e.preventDefault();
     document.getElementById("number").innerHTML = [
-      numberToString(nameInput.value) + " төгрөг",
+      numberToWord(nameInput.value) + " төгрөг",
     ];
 
-    console.log(numberToString(nameInput.value + "төгрөг"));
+    console.log(numberToWord(nameInput.value + "төгрөг"));
   });
 
 //Console test
-console.log(numberToString(987654321) + " төгрөг");
+console.log(numberToWord(987654321) + " төгрөг");
