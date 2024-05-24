@@ -11,18 +11,7 @@ function numberToWord(number) {
     "найман",
     "есөн",
   ];
-  const teens = [
-    "",
-    "eleven",
-    "twelve",
-    "thirteen",
-    "fourteen",
-    "fifteen",
-    "sixteen",
-    "seventeen",
-    "eighteen",
-    "nineteen",
-  ];
+ 
   const lastTens = [
     "",
     "арав",
