@@ -11,7 +11,18 @@ function numberToWord(number) {
     "найман",
     "есөн",
   ];
-
+  const teens = [
+    "",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+  ];
   const lastTens = [
     "",
     "арав",
@@ -78,9 +89,9 @@ function numberToWord(number) {
 
   segments.forEach((segment, index) => {
     const segmentStr = convertSegment(segment);
-    if (segmentStr !== "    ") {
+    if (segmentStr !== "Тэг") {
       if (
-        segmentStr !== "zero" ||
+        segmentStr !== "Тэг" ||
         (segments.length === 1 && index === segments.length - 1) ||
         (index === segments.length - 2 &&
           segments[segments.length - 1] === "000")
