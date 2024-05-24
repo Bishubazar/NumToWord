@@ -3,6 +3,18 @@ function numberToWord(number) {
     "",
     "нэг",
     "хоёр",
+    "гурав",
+    "дөрөв",
+    "тав",
+    "зургаа",
+    "долоо",
+    "найм",
+    "ес",
+  ];
+  const middleUnits = [
+    "",
+    "нэг",
+    "хоёр",
     "гурван",
     "дөрвөн",
     "таван",
@@ -10,18 +22,6 @@ function numberToWord(number) {
     "долоон",
     "найман",
     "есөн",
-  ];
-  const teens = [
-    "",
-    "eleven",
-    "twelve",
-    "thirteen",
-    "fourteen",
-    "fifteen",
-    "sixteen",
-    "seventeen",
-    "eighteen",
-    "nineteen",
   ];
   const lastTens = [
     "",
@@ -35,7 +35,6 @@ function numberToWord(number) {
     "ная",
     "ер",
   ];
-
   const tens = [
     "",
     "арван",
@@ -48,7 +47,6 @@ function numberToWord(number) {
     "наян",
     "ерэн",
   ];
-
   const thousands = ["", "мянга", "сая", "тэрбум", "их наяд"];
 
   function capitalizeFirstLetter(string) {
@@ -56,10 +54,11 @@ function numberToWord(number) {
   }
 
   function convertSegment(segment) {
-    let num = parseInt(segment, 10);
+    let num = parseInt(segment);
     let str = "";
 
     if (num === 0) return "Тэг";
+    if (num === null) return "Хоосон";
 
     if (num >= 100) {
       str += units[Math.floor(num / 100)] + " зуун ";
@@ -72,10 +71,10 @@ function numberToWord(number) {
     }
 
     if (num > 0) {
-      str += units[num] + " ";
+      str += middleUnits[num] + " ";
     }
 
-    return str.trim();
+    return str;
   }
 
   let str = "";
@@ -101,6 +100,7 @@ function numberToWord(number) {
     }
   });
 
+  //   return str.trim();
   return capitalizeFirstLetter(str.trim());
 }
 
@@ -119,6 +119,6 @@ document
     console.log(numberToWord(nameInput.value + "төгрөг"));
   });
 
-// Console test
-console.log(numberToWord(1000000000000)); // Output: "one trillion"
-console.log(numberToWord(1234567890123)); // Output: "one trillion two hundred thirty four billion five hundred sixty seven million eight hundred ninety thousand one hundred twenty three"
+//Console test
+console.log(numberToWord(987654321) + " төгрөг");
+console.log(numberToWord(1000000000000)); //
