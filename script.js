@@ -120,5 +120,5 @@ document
   });
 
 // Console test
-console.log(numberToWord(1000000000000)); // Output: "one trillion"
-console.log(numberToWord(1234567890123)); // Output: "one trillion two hundred thirty four billion five hundred sixty seven million eight hundred ninety thousand one hundred twenty three"
+console.log(numberToWord(1000000000000));
+console.log(numberToWord(1234567890123));
